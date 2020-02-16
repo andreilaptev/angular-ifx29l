@@ -2,7 +2,7 @@
     <form  novalidate >
       <select  [(ngModel)]="position"  name="question" (change)="onPick()" required> 
           <option [value]="undefined" disabled selected hidden>Please choose a question:</option>
-          <option *ngFor="let q of questions" value="{{q.id}}"> Question {{ q.id}} </option>        
+          <option *ngFor="let q of questions" value="{{q.id}}"> Question {{ q.id}} -  {{ q.theme }} </option>        
       </select>
     </form>
 </div>
