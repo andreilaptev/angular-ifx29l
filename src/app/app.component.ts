@@ -12,7 +12,6 @@ export class AppComponent {
   title = 'Quiz';
 
  start: boolean = false;
- //currentQuestion = questions[0];
  currentQuestion : any;
  questionsCounter: number = 0;
  numberOfQuestons: number = questions['length'];
