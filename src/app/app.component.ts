@@ -40,7 +40,7 @@ export class AppComponent {
     } 
     this.questionsCounter ++;
     this.questionsCounter == this.numberOfQuestons ? this.endQuiz() : this.currentQuestion = questions[this.questionsCounter];
-    this.questSelected = !this.questSelected; 
+    this.questionsCounter == this.numberOfQuestons -1 ? this.questSelected = true: this.questSelected = !this.questSelected; 
   }
 
     endQuiz(){
