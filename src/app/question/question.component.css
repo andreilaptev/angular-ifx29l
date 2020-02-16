@@ -1,0 +1,35 @@
+form {
+    margin-top: 5%;;
+}
+
+.name {
+    margin-bottom: 50px;;
+}
+.options {
+    margin-top: 15px;
+    transform: translateX(30%);
+    text-align: left;
+}
+
+
+.question button{
+    margin-top: 100px;;
+}
+
+.question input {
+    cursor: pointer;
+}
+
+.question button {
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.warning {
+    color: red;
+    font-size: 40px;
+}
+
+form > button {
+    cursor: pointer;
+}

@@ -1,4 +1,28 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<div class="container">
+  <div class="welcome" *ngIf="!start">
+    <h2> Hi! Welcome to our quiz!</h2>
+    <button (click)="onStart()"> Press to start</button>
+  </div>
+
+  <app-selector *ngIf="start && !questSelected && !end"
+    [questions] = toSelector
+    (choice)="setQuestion($event)"
+    >
+  </app-selector>
+
+  <div class="questionare" *ngIf="questSelected && !end">  
+    <app-question 
+      [question] = currentQuestion
+      (nextQuestion)="changeQuestion($event)"
+    >
+    </app-question>
+  </div>
+
+  <div class="finish" *ngIf="end">
+    <h1 *ngIf="score == 5" style="color: green"> Excellent! </h1>
+    <h2  [ngStyle]="{'color': score > 3 ? 'green' : 'red' }">
+     {{ message }} </h2>
+    <h3> Thank you! </h3>
+    <button (click) = "retake()">  Retake quiz</button>
+  </div>
+</div>

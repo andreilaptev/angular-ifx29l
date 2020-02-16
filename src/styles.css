@@ -1,1 +1,31 @@
-/* Add application styles & imports to this file! */
+/* You can add global styles to this file, and also import other style files */
+body {
+    background: #c2f0cf;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ button {
+    width: 150px;
+    height: 50px;;
+    background: rgb(238, 238, 157);
+    border-radius: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+h2, h3, .name {
+    color: #4848dc;
+}
+
+.name {
+    font-weight: 600;
+}
+label {
+    color: #4e5644;
+    font-weight: 600;
+}
+

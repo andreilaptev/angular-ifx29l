@@ -1,0 +1,13 @@
+<div class="question">
+  <form #myForm="ngForm" (submit)="onAnswer(myForm.value)" (click)="changed()" novalidate >
+      <div class="name">{{question.name}}</div>
+      <div class="options" *ngFor="let o of question.options ">
+          <input id="option1" type="radio"  value="{{o}}"  name="answer"  ngModel required >
+          <label for="option1">{{o}}</label>  
+      </div>        
+      <button type="submit"> Submit </button>
+      <div *ngIf="empty" class="warning">
+        <p>Please select an option</p>
+    </div>          
+  </form> 
+</div>
