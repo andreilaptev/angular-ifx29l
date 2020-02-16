@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="welcome" *ngIf="!start">
+  <div class="welcome" *ngIf="!end">
     <h2> Hi! Welcome to our quiz!</h2>
-    <button (click)="onStart()"> Press to start</button>
+    <button *ngIf="!start" (click)="onStart()"> Press to start</button>
   </div>
 
   <app-selector *ngIf="start && !questSelected && !end"
