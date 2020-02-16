@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import * as questions  from '../assets/questions.json';
-//import  questions  from '../assets/questions';
 import 'rxjs/add/operator/filter';
 import { Question } from './question';
 
@@ -21,15 +20,12 @@ export class AppComponent {
  end: boolean = false
  message: string;
  toSelector: Array<Question> = questions as any;
- //toSelector: Array [];
  position : number;
  questSelected: boolean = false;
 
   ngOnInit(){
     // For STACKBLITZ live mode
     this.numberOfQuestons = questions.default.length;
-
-
   }
 
   onStart(){
